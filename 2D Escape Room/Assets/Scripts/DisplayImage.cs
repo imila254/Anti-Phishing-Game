@@ -13,7 +13,7 @@ public class DisplayImage : MonoBehaviour
             if (value == 5)
                 currentWall = 1;
             else if (value == 0)
-                currentWall = 0;
+                currentWall = 4;
             else
                 currentWall = value;
         }
