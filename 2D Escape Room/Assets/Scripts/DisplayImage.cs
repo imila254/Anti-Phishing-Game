@@ -5,6 +5,14 @@ using UnityEngine;
 public class DisplayImage : MonoBehaviour
 {
 
+    public enum State
+    {
+        Normal,
+        Zoom
+    };
+
+    public State CurrentState { get; set; }
+
     public int CurrentWall
     {
         get { return currentWall; }
@@ -13,7 +21,7 @@ public class DisplayImage : MonoBehaviour
             if (value == 5)
                 currentWall = 1;
             else if (value == 0)
-                currentWall = 0;
+                currentWall = 4;
             else
                 currentWall = value;
         }
