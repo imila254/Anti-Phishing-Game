@@ -60,7 +60,6 @@ public class ButtonBehaviour : MonoBehaviour
 
             GetComponent<Button>().enabled = true;
 
-            this.transform.SetSiblingIndex(0);
         }
 
         if (currentDisplay.CurrentState == DisplayImage.State.Normal && ThisButtonId == ButtonId.RoomChange)
