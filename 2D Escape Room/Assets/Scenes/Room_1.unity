@@ -561,6 +561,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectsToManage:
+  - {fileID: 1993003650}
+  - {fileID: 1419220428}
+  - {fileID: 1827302158}
   - {fileID: 917563000}
 --- !u!4 &739447917
 Transform:

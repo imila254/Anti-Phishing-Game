@@ -23,6 +23,7 @@ public class ObjectsManager : MonoBehaviour
     {
         for (var i = 0; i < objectsToManage.Length; i++)
         {
+            Debug.Log(currentDisplay.GetComponent<SpriteRenderer>().sprite.name);
             if (objectsToManage[i].name == currentDisplay.GetComponent<SpriteRenderer>().sprite.name)
             {
                 objectsToManage[i].SetActive(true);

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonHandler : MonoBehaviour
 {
@@ -47,8 +48,31 @@ public class ButtonHandler : MonoBehaviour
         }
         else
         {
-            currentDisplay.GetComponent<SpriteRenderer>().sprite =
-                Resources.Load<Sprite>("Sprites/R1-wall" + currentDisplay.CurrentWall);
+            switch (SceneManager.GetActiveScene().name)
+            {
+                case "Room_1":
+                    currentDisplay.GetComponent<SpriteRenderer>().sprite =
+                        Resources.Load<Sprite>("Sprites/R1-wall" + currentDisplay.CurrentWall);
+
+                    break;
+
+                case "Room_2":
+                    currentDisplay.GetComponent<SpriteRenderer>().sprite =
+                        Resources.Load<Sprite>("Sprites/R2-wall" + currentDisplay.CurrentWall);
+
+                    break;
+
+                case "Room_3":
+                    currentDisplay.GetComponent<SpriteRenderer>().sprite =
+                        Resources.Load<Sprite>("Sprites/R3-wall" + currentDisplay.CurrentWall);
+
+                    break;
+            }
+            {
+                
+            }
+            //currentDisplay.GetComponent<SpriteRenderer>().sprite =
+            //    Resources.Load<Sprite>("Sprites/R1-wall" + currentDisplay.CurrentWall);
 
             currentDisplay.CurrentState = DisplayImage.State.Normal;
         }
