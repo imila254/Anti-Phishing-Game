@@ -29,18 +29,30 @@ public class ButtonHandler : MonoBehaviour
         currentDisplay.CurrentWall = currentDisplay.CurrentWall - 1;
     }
 
-    public void OnClickZoomReturn()
+    public void OnClickReturn()
     {
-        GameObject.Find("displayImage").GetComponent<DisplayImage>().CurrentState = DisplayImage.State.Normal;
-        var zoomInObjects = FindObjectsOfType<ZoomInObject>();
 
-        foreach (var zoomInObject in zoomInObjects)
+        if (currentDisplay.CurrentState == DisplayImage.State.Zoom)
         {
-            zoomInObject.gameObject.layer = 0;
+            GameObject.Find("displayImage").GetComponent<DisplayImage>().CurrentState = DisplayImage.State.Normal;
+            var zoomInObjects = FindObjectsOfType<ZoomInObject>();
+
+            foreach (var zoomInObject in zoomInObjects)
+            {
+                zoomInObject.gameObject.layer = 0;
+            }
+
+            Camera.main.orthographicSize = initialCameraSize;
+            Camera.main.transform.position = initialCameraPosition;
+        }
+        else
+        {
+            currentDisplay.GetComponent<SpriteRenderer>().sprite =
+                Resources.Load<Sprite>("Sprites/R1-wall" + currentDisplay.CurrentWall);
+
+            currentDisplay.CurrentState = DisplayImage.State.Normal;
         }
 
-        Camera.main.orthographicSize = initialCameraSize;
-        Camera.main.transform.position = initialCameraPosition;
     }
     // Update is called once per frame
     void Update()
