@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DisplayImage : MonoBehaviour
 {
@@ -13,6 +15,7 @@ public class DisplayImage : MonoBehaviour
     };
 
     public State CurrentState { get; set; }
+
 
     public int CurrentWall
     {
@@ -31,6 +34,7 @@ public class DisplayImage : MonoBehaviour
     private int currentWall;
     private int previousWall;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,12 +45,82 @@ public class DisplayImage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (currentWall != previousWall)
+
+        switch (SceneManager.GetActiveScene().name)
         {
-            GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/R1-wall" + currentWall.ToString());
-            
+            case "Room_1":
+
+                if (currentWall != previousWall)
+                {
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/R1-wall" + currentWall.ToString());
+
+                }
+
+                previousWall = currentWall;
+                break;
+
+            case "Room_2":
+
+                if (currentWall != previousWall)
+                {
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/R2-wall" + currentWall.ToString());
+
+                }
+
+                previousWall = currentWall;
+                break;
+
+            case "Room_3":
+                if (currentWall != previousWall)
+                {
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/R3-wall" + currentWall.ToString());
+
+                }
+
+                previousWall = currentWall;
+                break;
         }
 
-        previousWall = currentWall;
+
+        //if (SceneManager.GetActiveScene().name == "Room_1")
+        //{
+        //    if (currentWall != previousWall)
+        //    {
+        //        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/R1-wall" + currentWall.ToString());
+
+        //    }
+
+        //    previousWall = currentWall;
+        //}
+
+        //if (SceneManager.GetActiveScene().name == "Room_2")
+        //{
+        //    if (currentWall != previousWall)
+        //    {
+        //        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/R2-wall" + currentWall.ToString());
+
+        //    }
+
+        //    previousWall = currentWall;
+        //}
+
+        //if (SceneManager.GetActiveScene().name == "Room_3")
+        //{
+        //    if (currentWall != previousWall)
+        //    {
+        //        GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/R3-wall" + currentWall.ToString());
+
+        //    }
+
+        //    previousWall = currentWall;
+        //}
+
+        //if (currentWall != previousWall)
+        //{
+        //    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/R1-wall" + currentWall.ToString());
+            
+        //}
+
+        //previousWall = currentWall;
     }
 }
