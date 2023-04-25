@@ -40,7 +40,7 @@ public class ButtonBehaviour : MonoBehaviour
             this.transform.SetSiblingIndex(0);
         }
 
-        if (currentDisplay.CurrentState == DisplayImage.State.Zoom && ThisButtonId == ButtonId.RoomChange)
+        if (currentDisplay.CurrentState != DisplayImage.State.Normal && ThisButtonId == ButtonId.RoomChange)
         {
             GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
                 GetComponent<Image>().color.b, 0);
@@ -49,11 +49,12 @@ public class ButtonBehaviour : MonoBehaviour
 
             this.transform.SetSiblingIndex(0);
         }
+
     }
 
     void Display()
     {
-        if (currentDisplay.CurrentState == DisplayImage.State.Zoom && ThisButtonId == ButtonId.Return)
+        if (currentDisplay.CurrentState != DisplayImage.State.Normal && ThisButtonId == ButtonId.Return)
         {
             GetComponent<Image>().color = new Color(GetComponent<Image>().color.r, GetComponent<Image>().color.g,
                 GetComponent<Image>().color.b, 1);
