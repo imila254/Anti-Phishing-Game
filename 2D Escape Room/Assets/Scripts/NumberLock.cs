@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class NumberLock : MonoBehaviour
 {
-    
+
     public string Password;
     public GameObject OpenLockerSprite;
-    
+    public int digitNumber;
     public Sprite[] numberSprites;
 
-    public int[] currentIndividualIndex = { 0, 0, 0 };
+    public int[] currentIndividualIndex;
 
     private bool isOpen;
 
@@ -22,9 +22,22 @@ public class NumberLock : MonoBehaviour
         LoadAllNumberSprites();
     }
 
-   void Update()
+    void Update()
     {
         OpenLocker();
+    }
+
+    void currentIndexSet()
+    {
+        switch (digitNumber)
+        {
+            case 3:
+                _ = new int[] { 0, 0, 0 };
+                break;
+            case 5:
+                _ = new int[] { 0, 0, 0, 0, 0 };
+                break;
+        }
     }
 
     void LoadAllNumberSprites()
@@ -36,7 +49,7 @@ public class NumberLock : MonoBehaviour
     {
         bool correct = true;
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < digitNumber; i++)
         {
             if (Password[i] != transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Substring(transform.GetChild(i).GetComponent<SpriteRenderer>().sprite.name.Length - 1)[0])
             {
@@ -45,7 +58,7 @@ public class NumberLock : MonoBehaviour
         }
         return correct;
 
-        
+
     }
     void OpenLocker()
     {
