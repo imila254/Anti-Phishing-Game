@@ -1,7 +1,11 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DigitalDisplay : MonoBehaviour
 {
@@ -9,6 +13,10 @@ public class DigitalDisplay : MonoBehaviour
     [SerializeField] private Sprite[] digits;
 
     [SerializeField] private Image[] characters;
+
+    public TextMeshProUGUI ResultText;
+
+    public string SceneToBeLoaded;
 
     private string codeSequence;
 
@@ -127,10 +135,14 @@ public class DigitalDisplay : MonoBehaviour
         if (codeSequence == Password)
         {
             Debug.Log("Correct!");
+            StartCoroutine(ShowMessage("Correct!", 2, true));
+            SceneManager.LoadScene(SceneToBeLoaded);
+
         }
         else
         {
             Debug.Log("Wrong!");
+            StartCoroutine(ShowMessage("Wrong!", 2, false));
             ResetDisplay();
         }
     }
@@ -148,5 +160,14 @@ public class DigitalDisplay : MonoBehaviour
     private void OnDestroy()
     {
         PushTheButton.ButtonPressed -= AddDigitToCodeSequence;
+    }
+
+    IEnumerator ShowMessage(string message, float delay, bool isCorrect)
+    {
+        ResultText.text = message;
+        ResultText.color = isCorrect ? Color.green : Color.red;
+        ResultText.enabled = true;
+        yield return new WaitForSeconds(delay);
+        ResultText.enabled = false;
     }
 }

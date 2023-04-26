@@ -9,9 +9,12 @@ public class ObjectsManager : MonoBehaviour
 
     public GameObject[] objectsToManage;
 
+    public GameObject[] UIRenderObjects;
+
     void Start()
     {
         currentDisplay = GameObject.Find("displayImage").GetComponent<DisplayImage>();
+        if (UIRenderObjects != null) RenderUI();
     }
 
     void Update()
@@ -32,6 +35,14 @@ public class ObjectsManager : MonoBehaviour
             {
                 objectsToManage[i].SetActive(false);
             }
+        }
+    }
+
+    void RenderUI()
+    {
+        for (var i = 0; i < UIRenderObjects.Length; i++)
+        {
+            UIRenderObjects[i].SetActive(false);
         }
     }
 }
