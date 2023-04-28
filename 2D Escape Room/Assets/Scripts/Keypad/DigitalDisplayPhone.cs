@@ -17,6 +17,8 @@ public class DigitalDisplayPhone : MonoBehaviour
 
     public string PhoneNumber = "864623363";
 
+    public AudioSource PhoneAudio;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -212,6 +214,7 @@ public class DigitalDisplayPhone : MonoBehaviour
             Debug.Log("Calling...");
             StartCoroutine(ShowMessage("Calling...", 1, true));
             //SceneManager.LoadScene(SceneToBeLoaded);
+            PhoneAudio.Play();
 
         }
         else
