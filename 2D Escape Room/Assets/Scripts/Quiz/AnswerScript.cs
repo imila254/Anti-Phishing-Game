@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -30,7 +31,7 @@ public class AnswerScript : MonoBehaviour
         else
         {
             Debug.Log("Wrong Answer");
-            quizManager.correct();
+            quizManager.wrong();
         }
     }
 }

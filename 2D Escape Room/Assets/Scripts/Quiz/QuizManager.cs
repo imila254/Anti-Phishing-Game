@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class QuizManager : MonoBehaviour
@@ -11,12 +12,23 @@ public class QuizManager : MonoBehaviour
     public GameObject[] options;
     public int currentQuestion;
 
+    public GameObject Quizpanel;
+    public GameObject RGPanel;
+    public GameObject GOPanel;
+
     public TextMeshProUGUI QuestionText;
+    public TextMeshProUGUI ScoreText;
+    public int passingScore;
+
+    int totalQuestions = 0;
+    public int score;
 
     // Start is called before the first frame update
     void Start()
     {
-        Console.WriteLine("Start");
+        totalQuestions = QnA.Count;
+        RGPanel.SetActive(false);
+        GOPanel.SetActive(false);
         generateQuestion();
 
 
@@ -28,7 +40,33 @@ public class QuizManager : MonoBehaviour
         
     }
 
+    public void retry()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void GameOver()
+    {
+        Quizpanel.SetActive(false);
+        if (score >= passingScore)
+        {
+            GOPanel.SetActive(true);
+        }
+        else
+        {
+            RGPanel.SetActive(true);
+            ScoreText.text = score + "/" + totalQuestions;
+        }
+    }
+
     public void correct()
+    {
+        score += 1;
+        QnA.RemoveAt(currentQuestion);
+        generateQuestion();
+    }
+
+    public void wrong()
     {
         QnA.RemoveAt(currentQuestion);
         generateQuestion();
@@ -51,12 +89,21 @@ public class QuizManager : MonoBehaviour
 
     void generateQuestion()
     {
-        currentQuestion = UnityEngine.Random.Range(0, QnA.Count);
+        if(QnA.Count > 0)
+        {
+            currentQuestion = UnityEngine.Random.Range(0, QnA.Count);
 
-        QuestionText.text = QnA[currentQuestion].Questions;
+            QuestionText.text = QnA[currentQuestion].Questions;
 
-        SetAnswers();
+            SetAnswers();
+        }
+        else
+        {
+            Debug.Log("Out of Questions");
+            GameOver();
 
+        }
+       
         
     }
 }
