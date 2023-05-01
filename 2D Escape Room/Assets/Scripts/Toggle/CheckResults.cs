@@ -38,16 +38,16 @@ public class CheckResults : MonoBehaviour
 
         switch (CorrectButtonIndexes.Length)
         {
-            case 3:
-                if (buttons[0].sprite.name.Contains("Off")
-               && buttons[1].sprite.name.Contains("On")
-               && buttons[2].sprite.name.Contains("On")
-               && buttons[3].sprite.name.Contains("On")
+            case 4:
+                if (buttons[0].sprite.name.Contains("On")
+               && buttons[1].sprite.name.Contains("Off")
+               && buttons[2].sprite.name.Contains("Off")
+               && buttons[3].sprite.name.Contains("Off")
                && buttons[4].sprite.name.Contains("Off")
-               && buttons[5].sprite.name.Contains("Off")
-               && buttons[6].sprite.name.Contains("Off")
+               && buttons[5].sprite.name.Contains("On")
+               && buttons[6].sprite.name.Contains("On")
                && buttons[7].sprite.name.Contains("Off")
-               && buttons[8].sprite.name.Contains("Off")
+               && buttons[8].sprite.name.Contains("On")
                 ) isCorrect = true;
                 break;
             case 5:
