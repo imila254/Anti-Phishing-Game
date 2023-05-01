@@ -34,8 +34,6 @@ public class QuizManager : MonoBehaviour
         RGPanel.SetActive(false);
         GOPanel.SetActive(false);
         generateQuestion();
-
-
     }
 
     // Update is called once per frame
@@ -46,10 +44,7 @@ public class QuizManager : MonoBehaviour
 
     public void retry(GameObject currentDisplay)
     {
-        //SceneManager.LoadScene(1);
-        //currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/openConsoleQuiz1");
         currentQuestion = 0;
-        
         RGPanel.SetActive(false);
         GOPanel.SetActive(false);
         score = 0;
@@ -75,13 +70,11 @@ public class QuizManager : MonoBehaviour
     public void correct()
     {
         score += 1;
-       // QnA.RemoveAt(currentQuestion);
         generateQuestion();
     }
 
     public void wrong()
     {
-        //QnA.RemoveAt(currentQuestion);
         generateQuestion();
     }
 
@@ -105,12 +98,7 @@ public class QuizManager : MonoBehaviour
     {
        if(QnA.Count > currentQuestion)
         {
-            
-            //currentQuestion = UnityEngine.Random.Range(0, QnA.Count);
-
             QuestionText.text = QnA[currentQuestion].Questions;
-            
-
             SetAnswers();
             currentQuestion += 1;
             
