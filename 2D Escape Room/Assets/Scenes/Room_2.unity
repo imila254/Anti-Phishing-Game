@@ -6221,7 +6221,7 @@ MonoBehaviour:
   PanelCorrect: {fileID: 80735800}
   PanelWrong: {fileID: 1723674824}
   PanelResult: {fileID: 1215984496}
-  CorrectButtonIndexes: 010000000200000003000000
+  CorrectButtonIndexes: 00000000050000000600000008000000
 --- !u!114 &1498078918
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6346,7 +6346,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1505387354
 Transform:
   m_ObjectHideFlags: 0
