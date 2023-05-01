@@ -4,13 +4,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
+using static TMPro.SpriteAssetUtilities.TexturePacker_JsonArray;
 
 public class QuizManager : MonoBehaviour
 {
     public List<QuestionsAndAnswers> QnA;
     public GameObject[] options;
-    public int currentQuestion;
+    public int currentQuestion = 0;
 
     public GameObject Quizpanel;
     public GameObject RGPanel;
@@ -27,6 +29,8 @@ public class QuizManager : MonoBehaviour
     void Start()
     {
         totalQuestions = QnA.Count;
+        currentQuestion = 0;
+        score = 0;
         RGPanel.SetActive(false);
         GOPanel.SetActive(false);
         generateQuestion();
@@ -40,9 +44,18 @@ public class QuizManager : MonoBehaviour
         
     }
 
-    public void retry()
+    public void retry(GameObject currentDisplay)
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(1);
+        //currentDisplay.GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/openConsoleQuiz1");
+        currentQuestion = 0;
+        
+        RGPanel.SetActive(false);
+        GOPanel.SetActive(false);
+        score = 0;
+        currentDisplay.SetActive(true);
+        Quizpanel.SetActive(true);
+        generateQuestion();
     }
 
     public void GameOver()
@@ -62,13 +75,13 @@ public class QuizManager : MonoBehaviour
     public void correct()
     {
         score += 1;
-        QnA.RemoveAt(currentQuestion);
+       // QnA.RemoveAt(currentQuestion);
         generateQuestion();
     }
 
     public void wrong()
     {
-        QnA.RemoveAt(currentQuestion);
+        //QnA.RemoveAt(currentQuestion);
         generateQuestion();
     }
 
@@ -78,6 +91,7 @@ public class QuizManager : MonoBehaviour
         for (int i  = 0; i < options.Length; i++)
         {
             options[i].GetComponent<AnswerScript>().isCorrect = false;
+            Debug.Log(currentQuestion);
             options[i].transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = QnA[currentQuestion].Answers[i];
 
             if (QnA[currentQuestion].CorrectAnswers == i + 1)
@@ -89,21 +103,26 @@ public class QuizManager : MonoBehaviour
 
     void generateQuestion()
     {
-        if(QnA.Count > 0)
+       if(QnA.Count > currentQuestion)
         {
-            currentQuestion = UnityEngine.Random.Range(0, QnA.Count);
+            
+            //currentQuestion = UnityEngine.Random.Range(0, QnA.Count);
 
             QuestionText.text = QnA[currentQuestion].Questions;
+            
 
             SetAnswers();
+            currentQuestion += 1;
+            
         }
+        
         else
         {
             Debug.Log("Out of Questions");
             GameOver();
 
         }
-       
-        
+
+
     }
 }
