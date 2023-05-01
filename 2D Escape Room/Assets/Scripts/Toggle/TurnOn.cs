@@ -10,6 +10,7 @@ public class TurnOn : MonoBehaviour
 
     private Image switchImage;
     public GameObject FishTank;
+    public GameObject Tank;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +26,6 @@ public class TurnOn : MonoBehaviour
         //buttonState = 1 - buttonState;
         switchImage.sprite = switchSprites[1];
         FishTank.gameObject.SetActive(false);
+        Tank.gameObject.SetActive(true);
     }
 }
