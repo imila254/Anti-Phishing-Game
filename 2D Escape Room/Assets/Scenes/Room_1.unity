@@ -992,7 +992,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 455, y: 455.35004}
+  m_AnchoredPosition: {x: 454.99997, y: 455.35004}
   m_SizeDelta: {x: 1084.61, y: 930.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129941778
@@ -10857,11 +10857,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3586261216962806793, guid: 72c49ed8a53bb304b831be26095ecfff, type: 3}
       propertyPath: m_Name
-      value: changeViewPoint
+      value: puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 3586261216962806794, guid: 72c49ed8a53bb304b831be26095ecfff, type: 3}
       propertyPath: SpriteName
-      value: phone-zoom-in
+      value: Maze-puzzle
       objectReference: {fileID: 0}
     - target: {fileID: 3586261216962806796, guid: 72c49ed8a53bb304b831be26095ecfff, type: 3}
       propertyPath: m_RootOrder
