@@ -67,6 +67,7 @@ public class CheckWhiteboard : MonoBehaviour
             PanelResult.gameObject.SetActive(true);
             PanelCurrent.gameObject.SetActive(false);
             PanelCorrect.gameObject.SetActive(false);
+
         }
         else
         {
