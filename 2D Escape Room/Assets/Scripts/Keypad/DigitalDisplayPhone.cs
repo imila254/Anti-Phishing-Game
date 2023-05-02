@@ -15,7 +15,7 @@ public class DigitalDisplayPhone : MonoBehaviour
 
     private string codeSequence;
 
-    public string PhoneNumber = "864623363";
+    public string PhoneNumber = "864623367";
 
     public AudioSource PhoneAudio;
 
