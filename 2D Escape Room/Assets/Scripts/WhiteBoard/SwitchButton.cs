@@ -32,8 +32,4 @@ public class SwitchButton : MonoBehaviour
         switchImage.sprite = switchSprites[buttonState];
     }
 
-    public void Reset()
-    {
-        switchImage.sprite = switchSprites[0];
-    }
 }
