@@ -101,7 +101,6 @@ public class QuizManager : MonoBehaviour
             QuestionText.text = QnA[currentQuestion].Questions;
             SetAnswers();
             currentQuestion += 1;
-            
         }
         
         else
@@ -110,7 +109,5 @@ public class QuizManager : MonoBehaviour
             GameOver();
 
         }
-
-
     }
 }
