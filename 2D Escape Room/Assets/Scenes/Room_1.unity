@@ -17006,7 +17006,7 @@ MonoBehaviour:
   - {fileID: 786829417}
   ResultText: {fileID: 24921320}
   SceneToBeLoaded: Room_2
-  Password: 0000
+  Password: 6798
 --- !u!114 &2146081003
 MonoBehaviour:
   m_ObjectHideFlags: 0
