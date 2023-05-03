@@ -17,6 +17,7 @@ public class QuizManager2 : MonoBehaviour
     public GameObject Quizpanel;
     public GameObject RGPanel;
     public GameObject GOPanel;
+    public GameObject BluePanel;
 
     //public TextMeshProUGUI QuestionText;
     public GameObject QuestioSprite;
@@ -54,19 +55,21 @@ public class QuizManager2 : MonoBehaviour
         generateQuestion();
     }
 
-    public void GameOver()
+    IEnumerator GameOver()
     {
         int percentages = 0;
         Quizpanel.SetActive(false);
         if (score >= passingScore)
         {
             GOPanel.SetActive(true);
+            yield return new WaitForSeconds(3);
+            BluePanel.SetActive(true);
         }
         else
         {
             RGPanel.SetActive(true);
             percentages = score * 100 / totalQuestions;
-            ScoreText.text = score + "/" + totalQuestions;
+            ScoreText.text = percentages + "%";
         }
     }
 
