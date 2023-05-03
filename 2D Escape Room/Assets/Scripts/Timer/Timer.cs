@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class Timer : MonoBehaviour
     [SerializeField] TMP_Text timeText;
 
     [SerializeField] private float duration, currentTime;
+
+    [SerializeField] public string SceneToBeLoaded;
 
     // Start is called before the first frame update
     void Start()
@@ -51,7 +54,8 @@ public class Timer : MonoBehaviour
             currentTime--;
         }
         OpenPanel();
-
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneToBeLoaded);
     }
 
 
@@ -59,10 +63,6 @@ public class Timer : MonoBehaviour
     {
         timeText.text = "";
         GameOverPanel.SetActive(true);
-    }
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 }
