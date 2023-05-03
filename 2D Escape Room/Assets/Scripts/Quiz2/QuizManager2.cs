@@ -35,6 +35,7 @@ public class QuizManager2 : MonoBehaviour
         score = 0;
         RGPanel.SetActive(false);
         GOPanel.SetActive(false);
+        BluePanel.SetActive(false);
         generateQuestion();
     }
 
@@ -49,21 +50,20 @@ public class QuizManager2 : MonoBehaviour
         currentQuestion = 0;
         RGPanel.SetActive(false);
         GOPanel.SetActive(false);
+        BluePanel.SetActive(false);
         score = 0;
         currentDisplay.SetActive(true);
         Quizpanel.SetActive(true);
         generateQuestion();
     }
 
-    IEnumerator GameOver()
+    public void GameOver()
     {
         int percentages = 0;
         Quizpanel.SetActive(false);
         if (score >= passingScore)
         {
             GOPanel.SetActive(true);
-            yield return new WaitForSeconds(3);
-            BluePanel.SetActive(true);
         }
         else
         {
