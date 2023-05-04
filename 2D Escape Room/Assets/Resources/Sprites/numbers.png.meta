@@ -141,7 +141,7 @@ TextureImporter:
       name: numbers_2
       rect:
         serializedVersion: 2
-        x: 42
+        x: 41
         y: 108
         width: 27
         height: 41
@@ -162,7 +162,7 @@ TextureImporter:
       name: numbers_3
       rect:
         serializedVersion: 2
-        x: 85
+        x: 84
         y: 108
         width: 27
         height: 41
@@ -246,7 +246,7 @@ TextureImporter:
       name: numbers_7
       rect:
         serializedVersion: 2
-        x: 43
+        x: 42
         y: 0
         width: 27
         height: 41
@@ -309,9 +309,9 @@ TextureImporter:
       name: numbers_0
       rect:
         serializedVersion: 2
-        x: 170
+        x: 171
         y: 0
-        width: 28
+        width: 27
         height: 41
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
