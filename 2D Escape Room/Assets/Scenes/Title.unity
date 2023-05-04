@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a0f9ed7b97ad4540b217b87fc4bced1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToBeLoaded: Room_1
+  SceneToBeLoaded: Intro
 --- !u!212 &379061893
 SpriteRenderer:
   m_ObjectHideFlags: 0
