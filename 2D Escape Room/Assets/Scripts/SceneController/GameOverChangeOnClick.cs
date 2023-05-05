@@ -12,6 +12,7 @@ public class GameOverChangeOnClick : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            EntriesAddition.AddLevelTime(Timer.ResultTime, 3);
             SceneManager.LoadScene(SceneToBeLoaded);
         }
     }
