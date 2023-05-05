@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,9 +13,11 @@ public class Timer : MonoBehaviour
 
     [SerializeField] TMP_Text timeText;
 
-    [SerializeField] private float duration, currentTime;
+    [SerializeField] public float duration, currentTime;
 
     [SerializeField] public string SceneToBeLoaded;
+
+    public static float ResultTime;
 
     // Start is called before the first frame update
     void Start()
@@ -52,6 +55,7 @@ public class Timer : MonoBehaviour
 
             yield return new WaitForSeconds(1f);
             currentTime--;
+            ResultTime = currentTime;
         }
         OpenPanel();
         yield return new WaitForSeconds(2f);

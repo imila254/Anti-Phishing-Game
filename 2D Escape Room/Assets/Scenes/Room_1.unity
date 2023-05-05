@@ -1118,7 +1118,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 454.99994, y: 455.35004}
+  m_AnchoredPosition: {x: 454.99997, y: 455.35004}
   m_SizeDelta: {x: 1084.61, y: 930.79}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &129941778
@@ -11778,7 +11778,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 256902785}
   timeText: {fileID: 1623577193}
-  duration: 120
+  duration: 360
   currentTime: 0
   SceneToBeLoaded: Room_1-GameOver
 --- !u!1 &1341521790
@@ -18190,7 +18190,7 @@ MonoBehaviour:
   - {fileID: 661342472}
   - {fileID: 786829417}
   ResultText: {fileID: 24921320}
-  SceneToBeLoaded: Room_2
+  SceneToBeLoaded: Room1_leaderboard
   Password: 6798
 --- !u!114 &2146081003
 MonoBehaviour:

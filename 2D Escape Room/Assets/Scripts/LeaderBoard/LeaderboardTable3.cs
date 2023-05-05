@@ -17,8 +17,8 @@ public class LeaderboardTable3 : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
-        EntriesAddition entries = new EntriesAddition();
-        entries.AddHighscoreEntry("3table", 126,120,127);
+        //EntriesAddition entries = new EntriesAddition();
+        //entries.AddHighscoreEntry("3table", 126,120,127);
 
         Debug.Log(PlayerPrefs.GetString("leaderboardTable"));
         string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");

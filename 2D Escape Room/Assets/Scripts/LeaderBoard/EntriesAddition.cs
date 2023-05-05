@@ -11,7 +11,7 @@ using UnityEngine.UI;
 
 public class EntriesAddition : MonoBehaviour
 {
-    public void AddHighscoreEntry(string name, float time1, float time2, float time3)
+    public static void AddHighscoreEntry(string name, float time1, float time2, float time3)
     {
         HighscoreEntry highscoreEntry = new HighscoreEntry { name = name, time1 = time1, time2 = time2, time3 = time3 };
 
@@ -25,7 +25,7 @@ public class EntriesAddition : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void AddNewNameToHighscoreTable(string name)
+    public static void AddNewNameToHighscoreTable(string name)
     {
         HighscoreEntry highscoreEntry = new HighscoreEntry { name = name };
 
@@ -39,7 +39,7 @@ public class EntriesAddition : MonoBehaviour
         PlayerPrefs.Save();
     }
 
-    public void AddLevelTime(float time, int level)
+    public static void AddLevelTime(float time, int level)
     {
         string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
