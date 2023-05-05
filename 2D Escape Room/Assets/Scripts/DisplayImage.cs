@@ -79,6 +79,16 @@ public class DisplayImage : MonoBehaviour
 
                 previousWall = currentWall;
                 break;
+
+            case "Learning":
+                if (currentWall != previousWall)
+                {
+                    GetComponent<SpriteRenderer>().sprite = Resources.Load<Sprite>("Sprites/Learnings/" + currentWall.ToString());
+
+                }
+
+                previousWall = currentWall;
+                break;
         }
 
 

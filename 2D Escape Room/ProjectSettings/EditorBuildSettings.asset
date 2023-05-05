@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: b1912ac16dcc3704aa7692555daec52f
   - enabled: 1
+    path: Assets/Scenes/Username.unity
+    guid: 6fff4571ab0c44c4b9ec4b3475d58384
+  - enabled: 1
     path: Assets/Scenes/Intro.unity
     guid: 0b511d4afb9266a4c906854c372258ce
   - enabled: 1
-    path: Assets/Scenes/Username.unity
-    guid: 6fff4571ab0c44c4b9ec4b3475d58384
+    path: Assets/Scenes/Story.unity
+    guid: dbbad4bd15d19e949b43371880db2424
+  - enabled: 1
+    path: Assets/Scenes/Learning1.unity
+    guid: ceecc40d994355e45b275b1840e0e8db
   - enabled: 1
     path: Assets/Scenes/Room_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
@@ -24,8 +30,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Room_2.unity
     guid: 5873fc7c8f77e56419fc573f6e5e2c22
   - enabled: 1
+    path: Assets/Scenes/Room2_leaderboard.unity
+    guid: 37c3fa456a3765e4595f3a818662b664
+  - enabled: 1
     path: Assets/Scenes/Room_3.unity
     guid: f482d91be14b67340b9d527b2a0e4e3c
+  - enabled: 1
+    path: Assets/Scenes/Room3_leaderboard.unity
+    guid: f2fc6270279948f4f884b3253afac71f
   - enabled: 1
     path: Assets/Scenes/Room_1-GameOver.unity
     guid: 006f346c2e6a75c4fa8ec66e636c7d2b
