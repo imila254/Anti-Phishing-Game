@@ -57,7 +57,11 @@ public class ScoreController : MonoBehaviour
         if(target.tag == "wrong")
         {
             Destroy(target.gameObject);
-            score--;
+            if (score > 0)
+            { 
+                score--; 
+            }
+
         }
         
     }
@@ -76,9 +80,5 @@ public class ScoreController : MonoBehaviour
         }
     }
 
-    IEnumerable WaitRestart()
-    {
-        yield return new WaitForSeconds(1.5f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+    
 }
