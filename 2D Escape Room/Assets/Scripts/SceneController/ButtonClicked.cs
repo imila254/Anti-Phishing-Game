@@ -19,5 +19,6 @@ public class ButtonClicked : MonoBehaviour
     {
         Debug.Log("Clicked");
         SceneManager.LoadScene(SceneToBeLoaded);
+        CreateFile.AddValues();
     }
 }

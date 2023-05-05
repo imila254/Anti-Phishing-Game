@@ -21,7 +21,7 @@ public class HighscoreEntry
         this.time3 = time3;
     }
 
-    public HighscoreEntry() : this("N/A", -1, -1, -1) {}
+    public HighscoreEntry() : this("N/A", 360, 360, 360) {}
 
     public HighscoreEntry(string name)
     {

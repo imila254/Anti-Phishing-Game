@@ -15,13 +15,13 @@ public class EntriesAddition : MonoBehaviour
     {
         HighscoreEntry highscoreEntry = new HighscoreEntry { name = name, time1 = time1, time2 = time2, time3 = time3 };
 
-        string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");
+        string jsonStringRes = PlayerPrefs.GetString("leaderboard");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
 
         highscores.HighscoresEntries.Add(highscoreEntry);
 
         string jsonString = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("leaderboardTable", jsonString);
+        PlayerPrefs.SetString("leaderboard", jsonString);
         PlayerPrefs.Save();
     }
 
@@ -29,19 +29,19 @@ public class EntriesAddition : MonoBehaviour
     {
         HighscoreEntry highscoreEntry = new HighscoreEntry { name = name };
 
-        string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");
+        string jsonStringRes = PlayerPrefs.GetString("leaderboard");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
 
         highscores.HighscoresEntries.Add(highscoreEntry);
 
         string jsonString = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("leaderboardTable", jsonString);
+        PlayerPrefs.SetString("leaderboard", jsonString);
         PlayerPrefs.Save();
     }
 
     public static void AddLevelTime(float time, int level)
     {
-        string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");
+        string jsonStringRes = PlayerPrefs.GetString("leaderboard");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
         int lastIndex = highscores.HighscoresEntries.Count - 1;
 
@@ -59,7 +59,7 @@ public class EntriesAddition : MonoBehaviour
         }
 
         string jsonString = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("leaderboardTable", jsonString);
+        PlayerPrefs.SetString("leaderboard", jsonString);
         PlayerPrefs.Save();
     }
 }

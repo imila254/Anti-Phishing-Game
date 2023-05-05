@@ -20,8 +20,8 @@ public class LeaderboardTable2 : MonoBehaviour
         //EntriesAddition entries = new EntriesAddition();
         //entries.AddHighscoreEntry("12th", 125,120,120);
 
-        Debug.Log(PlayerPrefs.GetString("leaderboardTable"));
-        string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");
+        Debug.Log(PlayerPrefs.GetString("leaderboard"));
+        string jsonStringRes = PlayerPrefs.GetString("leaderboard");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
 
         Debug.Log(highscores.HighscoresEntries);
