@@ -37,7 +37,7 @@ public class ScoreController : MonoBehaviour
         destroy.SetActive(true);
         spawner.GameOver();
         GOPanel.SetActive(true);
-        Game.SetActive(false);
+        //Game.SetActive(false);
     }
     private void OnTriggerEnter2D(Collider2D target)
     {
