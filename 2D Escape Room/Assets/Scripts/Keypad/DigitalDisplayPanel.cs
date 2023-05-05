@@ -132,7 +132,7 @@ public class DigitalDisplayPanel : MonoBehaviour
         if (codeSequence == Password)
         {
             Debug.Log("Correct!");
-            StartCoroutine(ShowMessage("Correct!", 2, true));
+            StartCoroutine(ShowMessage("Correct!", 0.5f, true));
             //SceneManager.LoadScene(SceneToBeLoaded);
 
         }
