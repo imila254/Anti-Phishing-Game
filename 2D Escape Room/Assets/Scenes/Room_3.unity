@@ -3363,7 +3363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 1155218071}
   timeText: {fileID: 1566588852}
-  duration: 20
+  duration: 360
   currentTime: 0
   SceneToBeLoaded: Room_3-GameOver
 --- !u!4 &1350513455
