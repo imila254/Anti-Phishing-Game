@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -21,6 +20,7 @@ public class DigitalDisplay : MonoBehaviour
     private string codeSequence;
 
     public string Password = "7932";
+
 
     // Start is called before the first frame update
     void Start()
@@ -134,14 +134,17 @@ public class DigitalDisplay : MonoBehaviour
     {
         if (codeSequence == Password)
         {
-            Debug.Log("Correct!");
+            //Debug.Log("Correct!");
             StartCoroutine(ShowMessage("Correct!", 2, true));
+
+            //Debug.Log(Timer.ResultTime);
+            EntriesAddition.AddLevelTime(Timer.ResultTime, 1);
             SceneManager.LoadScene(SceneToBeLoaded);
 
         }
         else
         {
-            Debug.Log("Wrong!");
+            //Debug.Log("Wrong!");
             StartCoroutine(ShowMessage("Wrong!", 2, false));
             ResetDisplay();
         }
