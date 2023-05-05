@@ -23,7 +23,7 @@ public class CreateFile : MonoBehaviour
         string jsonString = JsonUtility.ToJson(highscores);
         PlayerPrefs.SetString("leaderboard", jsonString);
         PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetString("leaderboard"));
+        //Debug.Log(PlayerPrefs.GetString("leaderboard"));
 
 
     }
