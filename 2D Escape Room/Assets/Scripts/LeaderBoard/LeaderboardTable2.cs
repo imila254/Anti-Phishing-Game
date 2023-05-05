@@ -17,9 +17,6 @@ public class LeaderboardTable2 : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
-        //EntriesAddition entries = new EntriesAddition();
-        //entries.AddHighscoreEntry("12th", 125,120,120);
-
         Debug.Log(PlayerPrefs.GetString("leaderboard"));
         string jsonStringRes = PlayerPrefs.GetString("leaderboard");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
@@ -37,7 +34,7 @@ public class LeaderboardTable2 : MonoBehaviour
         {
             for (int j = i + 1; j < highscores.HighscoresEntries.Count; j++)
             {
-                if (highscores.HighscoresEntries[j].time1 > highscores.HighscoresEntries[i].time1)
+                if (highscores.HighscoresEntries[j].time1 < highscores.HighscoresEntries[i].time1)
                 {
                     HighscoreEntry tmp = highscores.HighscoresEntries[i];
                     highscores.HighscoresEntries[i] = highscores.HighscoresEntries[j];
@@ -50,7 +47,7 @@ public class LeaderboardTable2 : MonoBehaviour
         {
             for (int j = i + 1; j < highscores.HighscoresEntries.Count; j++)
             {
-                if (highscores.HighscoresEntries[j].time2 > highscores.HighscoresEntries[i].time2)
+                if (highscores.HighscoresEntries[j].time2 < highscores.HighscoresEntries[i].time2)
                 {
                     HighscoreEntry tmp = highscores.HighscoresEntries[i];
                     highscores.HighscoresEntries[i] = highscores.HighscoresEntries[j];

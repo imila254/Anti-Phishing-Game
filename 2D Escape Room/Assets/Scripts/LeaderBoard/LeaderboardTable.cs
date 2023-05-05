@@ -69,7 +69,7 @@ public class LeaderboardTable : MonoBehaviour
         {
             for (int j = i + 1; j < highscores.HighscoresEntries.Count; j++)
             {
-                if (highscores.HighscoresEntries[j].time1 > highscores.HighscoresEntries[i].time1)
+                if (highscores.HighscoresEntries[j].time1 < highscores.HighscoresEntries[i].time1)
                 {
                     HighscoreEntry tmp = highscores.HighscoresEntries[i];
                     highscores.HighscoresEntries[i] = highscores.HighscoresEntries[j];
@@ -158,74 +158,5 @@ public class LeaderboardTable : MonoBehaviour
         transformList.Add(entryTransform);
     }
 
-
-    //private class Highscores
-    //{
-    //    public List<HighscoreEntry> HighscoresEntries;
-    //}
-
-    //[System.Serializable]
-    //private class HighscoreEntry
-    //{
-    //    public string name;
-    //    public float time1;
-    //    public float time2;
-    //    public float time3;
-    //}
-    // Start is called before the first frame update
-
-    /*
-    private void AddHighscoreEntry(string name, float time1, float time2, float time3)
-    {
-        HighscoreEntry highscoreEntry = new HighscoreEntry{name = name, time1 = time1, time2 = time2, time3 = time3};
-
-        string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");
-        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
-
-        highscores.HighscoresEntries.Add(highscoreEntry);
-
-        string jsonString = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("leaderboardTable", jsonString);
-        PlayerPrefs.Save();
-    }
-
-    private void AddNewNameToHighscoreTable(string name)
-    {
-        HighscoreEntry highscoreEntry = new HighscoreEntry{name = name};
-
-        string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");
-        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
-
-        highscores.HighscoresEntries.Add(highscoreEntry);
-
-        string jsonString = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("leaderboardTable", jsonString);
-        PlayerPrefs.Save();
-    }
-
-    private void AddLevelTime(float time, int level)
-    {
-        string jsonStringRes = PlayerPrefs.GetString("leaderboardTable");
-        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
-        int lastIndex = highscores.HighscoresEntries.Count - 1;
-
-        switch (level)
-        {
-            case 1:
-                highscores.HighscoresEntries[lastIndex].time1 = time;
-                break;
-            case 2:
-                highscores.HighscoresEntries[lastIndex].time2 = time;
-                break;
-            case 3:
-                highscores.HighscoresEntries[lastIndex].time3 = time;
-                break;
-        }
-        
-        string jsonString = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("leaderboardTable", jsonString);
-        PlayerPrefs.Save();
-    }
-    */
 
 }

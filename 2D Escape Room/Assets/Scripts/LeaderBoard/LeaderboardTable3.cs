@@ -37,7 +37,7 @@ public class LeaderboardTable3 : MonoBehaviour
         {
             for (int j = i + 1; j < highscores.HighscoresEntries.Count; j++)
             {
-                if (highscores.HighscoresEntries[j].time1 > highscores.HighscoresEntries[i].time1)
+                if (highscores.HighscoresEntries[j].time1 < highscores.HighscoresEntries[i].time1)
                 {
                     HighscoreEntry tmp = highscores.HighscoresEntries[i];
                     highscores.HighscoresEntries[i] = highscores.HighscoresEntries[j];
@@ -50,7 +50,7 @@ public class LeaderboardTable3 : MonoBehaviour
         {
             for (int j = i + 1; j < highscores.HighscoresEntries.Count; j++)
             {
-                if (highscores.HighscoresEntries[j].time2 > highscores.HighscoresEntries[i].time2)
+                if (highscores.HighscoresEntries[j].time2 < highscores.HighscoresEntries[i].time2)
                 {
                     HighscoreEntry tmp = highscores.HighscoresEntries[i];
                     highscores.HighscoresEntries[i] = highscores.HighscoresEntries[j];
@@ -63,7 +63,7 @@ public class LeaderboardTable3 : MonoBehaviour
         {
             for (int j = i + 1; j < highscores.HighscoresEntries.Count; j++)
             {
-                if (highscores.HighscoresEntries[j].time3 > highscores.HighscoresEntries[i].time3)
+                if (highscores.HighscoresEntries[j].time3 < highscores.HighscoresEntries[i].time3)
                 {
                     HighscoreEntry tmp = highscores.HighscoresEntries[i];
                     highscores.HighscoresEntries[i] = highscores.HighscoresEntries[j];

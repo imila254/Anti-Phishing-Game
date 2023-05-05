@@ -26,27 +26,6 @@ public class UserNameTransfer : MonoBehaviour
     {
         username = inputField.GetComponent<TextMeshProUGUI>().text;
 
-        //Debug.Log("." + username + ".");
-        //Debug.Log(IsNameValid(username));
-        
-        //if (username == " " || username==null) Debug.Log("blogas");
-        //Debug.Log("Clicked");
-        //if (username.Length <= 1)
-        //{
-        //    Debug.Log("not valid");
-        //    textDisplay.gameObject.SetActive(true);
-        //    textDisplay.GetComponent<TMP_Text>().text = "Username is not valid";
-        //}
-
-        //else
-        //{
-        //    textDisplay.gameObject.SetActive(false);
-        //    EntriesAddition entries = new EntriesAddition();
-        //    entries.AddNewNameToHighscoreTable(username);
-        //    entries.AddHighscoreEntry(username, 240,240,240);
-        //    SceneManager.LoadScene(SceneToBeLoaded);
-        //}
-
         textDisplay.gameObject.SetActive(false);
 
         EntriesAddition.AddNewNameToHighscoreTable(username);
@@ -54,11 +33,4 @@ public class UserNameTransfer : MonoBehaviour
 
     }
 
-    private bool IsNameValid(string input)
-    {
-        //return Regex.IsMatch(input, @"^(?!\s*$).+");
-        return Regex.IsMatch(input, @"/^$|\s+/");
-
-
-    }
 }

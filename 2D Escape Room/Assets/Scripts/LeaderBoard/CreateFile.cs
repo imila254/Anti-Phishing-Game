@@ -9,7 +9,7 @@ public class CreateFile : MonoBehaviour
 
     public static void AddValues()
     {
-        PlayerPrefs.DeleteKey("leaderboard");
+
         highscoreEntryList = new List<HighscoreEntry>()
         {
             new HighscoreEntry { name = "Mantas", time1 = 360 , time2 = 390 , time3 = 310 },
