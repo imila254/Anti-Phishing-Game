@@ -13,6 +13,8 @@ public class DigitalDisplay : MonoBehaviour
 
     [SerializeField] private Image[] characters;
 
+    public int level;
+
     public TextMeshProUGUI ResultText;
 
     public string SceneToBeLoaded;
@@ -137,8 +139,8 @@ public class DigitalDisplay : MonoBehaviour
             //Debug.Log("Correct!");
             StartCoroutine(ShowMessage("Correct!", 2, true));
 
-            //Debug.Log(Timer.ResultTime);
-            EntriesAddition.AddLevelTime(Timer.ResultTime, 1);
+            EntriesAddition.AddLevelTime(360 - Timer.ResultTime, level);
+        
             SceneManager.LoadScene(SceneToBeLoaded);
 
         }

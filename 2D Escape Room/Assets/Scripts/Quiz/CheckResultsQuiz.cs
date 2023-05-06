@@ -88,7 +88,7 @@ public class CheckResultsQuiz : MonoBehaviour
         if (isCorrect)
         {
             PanelCorrect.gameObject.SetActive(true);
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(0.5f);
             PanelResult.gameObject.SetActive(true);
             DisplayNewObject.SetActive(true);
         }

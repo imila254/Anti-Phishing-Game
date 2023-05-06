@@ -566,7 +566,7 @@ MonoBehaviour:
   username: 
   inputField: {fileID: 1824072151}
   textDisplay: {fileID: 1692196658}
-  SceneToBeLoaded: Room_1
+  SceneToBeLoaded: Story
 --- !u!1 &1692196658
 GameObject:
   m_ObjectHideFlags: 0

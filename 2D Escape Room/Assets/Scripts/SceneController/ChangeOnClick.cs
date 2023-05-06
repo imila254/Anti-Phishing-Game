@@ -12,6 +12,7 @@ public class ChangeOnClick : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
+            CreateFile.AddValues();
             SceneManager.LoadScene(SceneToBeLoaded);
         }
     }
