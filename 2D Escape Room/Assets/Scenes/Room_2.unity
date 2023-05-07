@@ -5836,8 +5836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.950012, y: 82.350006}
-  m_SizeDelta: {x: 264.69, y: 187.96}
+  m_AnchoredPosition: {x: -10.309998, y: 80.58}
+  m_SizeDelta: {x: 280.08, y: 200.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926884152
 MonoBehaviour:
@@ -6404,27 +6404,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QnA:
-  - Questions: question 1
+  - Questions: Which email field is usually left empty in phishing emails?
     Answers:
-    - taip
-    - tu
-    - mes
-    - jus
-    CorrectAnswers: 1
-  - Questions: question 2
+    - "\u201CSubject\u201D"
+    - '"To"'
+    - "\u201CFrom\u201D"
+    - "\u201CFile\u201D"
+    CorrectAnswers: 2
+  - Questions: "Phishing campaigns typically aim to create a ______________ using
+      intense language and scare tactics, starting with the email\u2019s subject
+      line. Which phrase is missing."
     Answers:
-    - taip
-    - tu
-    - mes
-    - jus
+    - sense of urgency
+    - sense of trust
+    - sense of fear
+    - sense of happiness
     CorrectAnswers: 1
-  - Questions: question 3
+  - Questions: The URL is likely phishing if it contains a symbol like - __.
     Answers:
-    - taip
-    - tu
-    - mes
-    - jus
-    CorrectAnswers: 1
+    - "\"/\u201D"
+    - "\u201C-\u201D"
+    - '":"'
+    - "\u201C@\u201D"
+    CorrectAnswers: 4
+  - Questions: How do we call voice phishing when callers impersonate legitimate
+      companies to steal money and personal and financial information?
+    Answers:
+    - Catching
+    - Vishing
+    - Whispering
+    - Voice Catching
+    CorrectAnswers: 2
   options:
   - {fileID: 259826076}
   - {fileID: 1038059849}
@@ -6436,7 +6446,7 @@ MonoBehaviour:
   GOPanel: {fileID: 530257179}
   QuestionText: {fileID: 1401539637}
   ScoreText: {fileID: 744561454}
-  passingScore: 2
+  passingScore: 3
   score: 0
 --- !u!4 &990398742
 Transform:
