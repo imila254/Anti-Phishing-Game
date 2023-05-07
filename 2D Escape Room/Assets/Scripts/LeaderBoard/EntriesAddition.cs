@@ -62,5 +62,17 @@ public class EntriesAddition : MonoBehaviour
         PlayerPrefs.SetString("leaderboard", jsonString);
         PlayerPrefs.Save();
     }
+
+    public static string GetName()
+    {
+        string jsonStringRes = PlayerPrefs.GetString("leaderboard");
+        Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
+        int lastIndex = highscores.HighscoresEntries.Count - 1;
+
+
+        string name = highscores.HighscoresEntries[lastIndex ].name;
+
+        return name;
+    }
 }
 
