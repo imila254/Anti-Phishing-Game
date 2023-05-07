@@ -842,6 +842,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: zoomInSecondDrawer
       objectReference: {fileID: 0}
+    - target: {fileID: 375806732228474930, guid: 79e6ea0e6ddd97b4ab4a46d543905562, type: 3}
+      propertyPath: ZoomRatio
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 375806732228474931, guid: 79e6ea0e6ddd97b4ab4a46d543905562, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -3799,6 +3803,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: zoomInFirstDrawer
       objectReference: {fileID: 0}
+    - target: {fileID: 375806732228474930, guid: 79e6ea0e6ddd97b4ab4a46d543905562, type: 3}
+      propertyPath: ZoomRatio
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 375806732228474931, guid: 79e6ea0e6ddd97b4ab4a46d543905562, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -5828,8 +5836,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -12.950012, y: 82.350006}
-  m_SizeDelta: {x: 264.69, y: 187.96}
+  m_AnchoredPosition: {x: -10.309998, y: 80.58}
+  m_SizeDelta: {x: 280.08, y: 200.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &926884152
 MonoBehaviour:
@@ -6396,27 +6404,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   QnA:
-  - Questions: question 1
+  - Questions: Which email field is usually left empty in phishing emails?
     Answers:
-    - taip
-    - tu
-    - mes
-    - jus
-    CorrectAnswers: 1
-  - Questions: question 2
+    - "\u201CSubject\u201D"
+    - '"To"'
+    - "\u201CFrom\u201D"
+    - "\u201CFile\u201D"
+    CorrectAnswers: 2
+  - Questions: "Phishing campaigns typically aim to create a ______________ using
+      intense language and scare tactics, starting with the email\u2019s subject
+      line. Which phrase is missing."
     Answers:
-    - taip
-    - tu
-    - mes
-    - jus
+    - sense of urgency
+    - sense of trust
+    - sense of fear
+    - sense of happiness
     CorrectAnswers: 1
-  - Questions: question 3
+  - Questions: The URL is likely phishing if it contains a symbol like - __.
     Answers:
-    - taip
-    - tu
-    - mes
-    - jus
-    CorrectAnswers: 1
+    - "\"/\u201D"
+    - "\u201C-\u201D"
+    - '":"'
+    - "\u201C@\u201D"
+    CorrectAnswers: 4
+  - Questions: How do we call voice phishing when callers impersonate legitimate
+      companies to steal money and personal and financial information?
+    Answers:
+    - Catching
+    - Vishing
+    - Whispering
+    - Voice Catching
+    CorrectAnswers: 2
   options:
   - {fileID: 259826076}
   - {fileID: 1038059849}
@@ -6428,7 +6446,7 @@ MonoBehaviour:
   GOPanel: {fileID: 530257179}
   QuestionText: {fileID: 1401539637}
   ScoreText: {fileID: 744561454}
-  passingScore: 2
+  passingScore: 3
   score: 0
 --- !u!4 &990398742
 Transform:
@@ -12581,8 +12599,8 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2012810537}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4848958, y: 0.48489588, z: 0.48489583}
+  m_LocalPosition: {x: 0, y: 0, z: -193.1}
+  m_LocalScale: {x: 0.43346292, y: 0.43346298, z: 0.43346295}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 926884151}
@@ -12594,8 +12612,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000030517578, y: 0}
-  m_SizeDelta: {x: 484.9779, y: 203.25754}
+  m_AnchoredPosition: {x: 0.519989, y: -3}
+  m_SizeDelta: {x: 488.7, y: 203.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012810539
 MonoBehaviour:
