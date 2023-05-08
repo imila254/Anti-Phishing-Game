@@ -12,10 +12,10 @@ public class CreateFile : MonoBehaviour
 
         highscoreEntryList = new List<HighscoreEntry>()
         {
-            new HighscoreEntry { name = "Mantas", time1 = 360 , time2 = 390 , time3 = 310 },
-            new HighscoreEntry { name = "Matas", time1 = 380, time2 = 370, time3 = 320 },
-            new HighscoreEntry { name = "Saule", time1 = 390, time2 = 410, time3 = 270 },
-            new HighscoreEntry { name = "Ieva", time1 = 410, time2 = 450, time3 = 320 }
+            new HighscoreEntry { name = "Mantas", time1 = 540 , time2 = 598, time3 = 470 },
+            new HighscoreEntry { name = "Matas", time1 = 549, time2 = 538, time3 = 485 },
+            new HighscoreEntry { name = "Saule", time1 = 522, time2 = 517, time3 = 590 },
+            new HighscoreEntry { name = "Ieva", time1 = 400, time2 = 527, time3 = 580 }
         };
 
 

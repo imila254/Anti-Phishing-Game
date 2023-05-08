@@ -6446,7 +6446,7 @@ MonoBehaviour:
   GOPanel: {fileID: 530257179}
   QuestionText: {fileID: 1401539637}
   ScoreText: {fileID: 744561454}
-  passingScore: 3
+  passingScore: 4
   score: 0
 --- !u!4 &990398742
 Transform:
@@ -8161,7 +8161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 865957583}
   timeText: {fileID: 903108996}
-  duration: 360
+  duration: 600
   currentTime: 0
   SceneToBeLoaded: Room_2-GameOver
 --- !u!4 &1250086262
@@ -11586,7 +11586,7 @@ MonoBehaviour:
   destroy: {fileID: 989249462}
   Backgroung: {fileID: 1707626054}
   score: 0
-  passScore: 1
+  passScore: 5
 --- !u!114 &1848755161
 MonoBehaviour:
   m_ObjectHideFlags: 0

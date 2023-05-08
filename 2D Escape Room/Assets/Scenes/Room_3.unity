@@ -809,7 +809,7 @@ MonoBehaviour:
   BluePanel: {fileID: 677005956}
   QuestioSprite: {fileID: 988168781}
   ScoreText: {fileID: 1308541894}
-  passingScore: 2
+  passingScore: 4
   score: 0
 --- !u!1 &342524876
 GameObject:
@@ -3363,7 +3363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameOverPanel: {fileID: 1155218071}
   timeText: {fileID: 1566588852}
-  duration: 360
+  duration: 600
   currentTime: 0
   SceneToBeLoaded: Room_3-GameOver
 --- !u!4 &1350513455
@@ -3454,7 +3454,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: 2a5faa3f1d9d70a48b342ea08ecfaa97, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
