@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class GameOverChangeOnClick : MonoBehaviour
+public class ChangeOnClickLevel : MonoBehaviour
 {
     public string SceneToBeLoaded;
 
@@ -12,8 +12,7 @@ public class GameOverChangeOnClick : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            EntriesAddition.AddLevelTime(600 - Timer.ResultTime, 3);
-            SceneManager.LoadScene(SceneToBeLoaded);
+           SceneManager.LoadScene(SceneToBeLoaded);
         }
     }
 }

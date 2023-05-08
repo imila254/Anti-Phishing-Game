@@ -139,7 +139,7 @@ public class DigitalDisplay : MonoBehaviour
             //Debug.Log("Correct!");
             StartCoroutine(ShowMessage("Correct!", 2, true));
 
-            EntriesAddition.AddLevelTime(360 - Timer.ResultTime, level);
+            EntriesAddition.AddLevelTime(600 - Timer.ResultTime, level);
         
             SceneManager.LoadScene(SceneToBeLoaded);
 
