@@ -1637,11 +1637,9 @@ MonoBehaviour:
   urls:
   - {fileID: 6542998423679960313, guid: 10734283bc30ccf4b85e696dcb269489, type: 3}
   - {fileID: 1008985393591603080, guid: c5741e98d999cdb47aed17654a29eb02, type: 3}
-  - {fileID: 958151510911595544, guid: e5d6adc4eab220a4795b21b59752889e, type: 3}
   - {fileID: 7502711631262400681, guid: e502c9a495cdee14884581e9998780bc, type: 3}
   - {fileID: 4411119380473757321, guid: bbe4640911ce4b64b931f98a79e81a78, type: 3}
   - {fileID: 759355295682019770, guid: bc0dda2efc66a734eade48cfddfcc8cc, type: 3}
-  - {fileID: 7944267902601801836, guid: d6694295d22b36740ada51f25c247a8e, type: 3}
   - {fileID: 395881299221776368, guid: 26f35d26670a80d418eef7e80e6332b1, type: 3}
   wrong:
   - {fileID: 8223821189436566875, guid: 3c2e86956d2ce104a85b3e7abf327d9a, type: 3}
@@ -3330,7 +3328,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: https://
+  m_text: http://
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6478,7 +6476,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1025701917
 Transform:
   m_ObjectHideFlags: 0
@@ -9270,7 +9268,7 @@ MonoBehaviour:
   PanelWrong: {fileID: 1723674824}
   PanelResult: {fileID: 1215984496}
   DisplayNewObject: {fileID: 1194454197}
-  CorrectButtonIndexes: 00000000050000000600000008000000
+  CorrectButtonIndexes: 050000000600000008000000
 --- !u!1001 &1501351752
 PrefabInstance:
   m_ObjectHideFlags: 0
