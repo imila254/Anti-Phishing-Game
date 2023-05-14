@@ -39,8 +39,8 @@ public class CheckResultsQuiz : MonoBehaviour
 
         switch (CorrectButtonIndexes.Length)
         {
-            case 4:
-                if (buttons[0].sprite.name.Contains("On")
+            case 3:
+                if (buttons[0].sprite.name.Contains("Off")
                && buttons[1].sprite.name.Contains("Off")
                && buttons[2].sprite.name.Contains("Off")
                && buttons[3].sprite.name.Contains("Off")
