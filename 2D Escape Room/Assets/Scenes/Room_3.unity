@@ -782,22 +782,22 @@ MonoBehaviour:
   - Sprites: Q1
     Answers:
     - PHISHING
-    - LEGITMATE
+    - LEGITIMATE
     CorrectAnswers: 2
   - Sprites: Q2
     Answers:
     - PHISHING
-    - LEGITMATE
+    - LEGITIMATE
     CorrectAnswers: 1
   - Sprites: Q3
     Answers:
     - PHISHING
-    - LEGITMATE
+    - LEGITIMATE
     CorrectAnswers: 1
   - Sprites: Q4
     Answers:
     - PHISHING
-    - LEGITMATE
+    - LEGITIMATE
     CorrectAnswers: 1
   options:
   - {fileID: 1949026024}
