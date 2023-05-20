@@ -17,17 +17,10 @@ public class LeaderboardTable2 : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
-        Debug.Log(PlayerPrefs.GetString("leaderboard"));
         string jsonStringRes = PlayerPrefs.GetString("leaderboard");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonStringRes);
 
-        Debug.Log(highscores.HighscoresEntries);
-        Debug.Log(highscores.HighscoresEntries.Count);
 
-        for (int i = 0; i < highscores.HighscoresEntries.Count; i++)
-        {
-            Debug.Log(highscores.HighscoresEntries[i].name + "  " + highscores.HighscoresEntries[i].time1 + "  " + highscores.HighscoresEntries[i].time2 + "  " + highscores.HighscoresEntries[i].time3);
-        }
 
 
         for (int i = 0; i < highscores.HighscoresEntries.Count; i++)

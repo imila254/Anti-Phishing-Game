@@ -22,17 +22,12 @@ public class ChangeView : MonoBehaviour, IInteractable
     }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         initialCameraSize = Camera.main.orthographicSize;
         initialCameraPosition = Camera.main.transform.position;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
 
 }
